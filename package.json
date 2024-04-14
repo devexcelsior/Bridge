@@ -1,0 +1,11 @@
+{
+  "name": "CReMber",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "devexcelsior <40436735+devexcelsior@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/frontend", "packages/backend"
+  ]
+}
