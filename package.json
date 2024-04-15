@@ -6,6 +6,18 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "packages/frontend", "packages/backend"
-  ]
+    "packages/frontend",
+    "packages/backend"
+  ],
+  "scripts": {
+    "start:frontend": "cd packages/frontend && yarn start",
+    "start:backend": "cd packages/backend && yarn start",
+    "start": "concurrently \"yarn start:frontend\" \"yarn start:backend\"",
+    "build:frontend": "cd packages/frontend && yarn build",
+    "build:backend": "cd packages/backend && yarn build",
+    "build": "yarn build:frontend && yarn build:backend"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
+  }
 }
