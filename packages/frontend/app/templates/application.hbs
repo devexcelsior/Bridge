@@ -1,7 +1,19 @@
 {{page-title "Frontend"}}
 
-{{! The following component displays Ember's default welcome message. }}
-<WelcomePage />
-{{! Feel free to remove this! }}
+<Hds::Form::Checkbox::Group @name="datacenter" as |G|>
+  <G.Legend>Hds::Form::Checkbox::Group</G.Legend>
+  <G.CheckboxField as |F|>
+    <F.Label>NYC1</F.Label>
+  </G.CheckboxField>
+  <G.CheckboxField as |F|>
+    <F.Label>DC1</F.Label>
+  </G.CheckboxField>
+  <G.CheckboxField as |F|>
+    <F.Label>NYC2</F.Label>
+  </G.CheckboxField>
+  <G.CheckboxField as |F|>
+    <F.Label>SF1</F.Label>
+  </G.CheckboxField>
+</Hds::Form::Checkbox::Group>
 
 {{outlet}}
