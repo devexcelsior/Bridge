@@ -15,18 +15,15 @@ You will need the following things properly installed on your computer.
 ## Installation
 
 1. Clone the repository
-2. Navigate to the frontend directory with `cd packages/frontend`
-3. Install dependencies with `yarn install`
-4. Navigate to the backend directory with `cd ../backend`
-5. Install dependencies with `yarn install`
+2. Install dependencies for both frontend and backend with `yarn install`
 
 ## Running / Development
 
-* Start the frontend application with `yarn start:frontend`
+* Start both the frontend and backend applications with `yarn start`
 * Visit your app at [http://localhost:7777](http://localhost:7777).
 * Visit your tests at [http://localhost:7777/tests](http://localhost:7777/tests).
-* Start the backend application with `yarn start:backend`
 * The backend server runs at [http://localhost:3000](http://localhost:3000).
+
 
 ### Code Generators
 
