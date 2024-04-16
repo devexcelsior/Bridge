@@ -8,7 +8,7 @@ export default class CustomersRoute extends Route {
 
     // TO DO: setup a service layer to have granular control over the data
     model() {
-        return fetch('http://localhost:3000/api/customers')
+        return fetch('http://localhost:3000/customers')
             .then(response => response.json())
             .then(data => {
                 console.log(data);
