@@ -7,6 +7,11 @@ async function bootstrap() {
     AppModule,
     new FastifyAdapter(),
   );
+  app.enableCors({
+    origin: 'http://localhost:7777', // Allow only this origin
+    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE', // Allow these methods
+    allowedHeaders: 'Content-Type, Accept', // Allow these headers
+  });
   await app.listen(3000);
 }
 bootstrap();
