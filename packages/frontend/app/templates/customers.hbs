@@ -1,2 +1,7 @@
 {{page-title "Customers"}}
+{{#each this.model as |customer|}}
+  <div class="customer">
+    <h2>{{customer.name}}</h2>
+  </div>
+{{/each}}
 {{outlet}}
