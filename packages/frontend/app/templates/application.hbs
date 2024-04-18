@@ -1,19 +1,16 @@
-{{page-title "Frontend"}}
-
-<Hds::Form::Checkbox::Group @name="datacenter" as |G|>
-  <G.Legend>Hds::Form::Checkbox::Group</G.Legend>
-  <G.CheckboxField as |F|>
-    <F.Label>NYC1</F.Label>
-  </G.CheckboxField>
-  <G.CheckboxField as |F|>
-    <F.Label>DC1</F.Label>
-  </G.CheckboxField>
-  <G.CheckboxField as |F|>
-    <F.Label>NYC2</F.Label>
-  </G.CheckboxField>
-  <G.CheckboxField as |F|>
-    <F.Label>SF1</F.Label>
-  </G.CheckboxField>
-</Hds::Form::Checkbox::Group>
-
-{{outlet}}
+<div class="doc-app-frame-mock-viewport {{if this.uiState.isSidebarVisible " sidebar-visible" "sidebar-hidden" }}">
+  <Hds::AppFrame as |Frame|>
+    <Frame.Header>
+      <Page::Header />
+    </Frame.Header>
+    <Frame.Sidebar>
+      Sidebar content
+    </Frame.Sidebar>
+    <Frame.Main>
+      {{outlet}}
+    </Frame.Main>
+    <Frame.Footer>
+      Footer
+    </Frame.Footer>
+  </Hds::AppFrame>
+</div>

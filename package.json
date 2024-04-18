@@ -19,8 +19,5 @@
     "build:frontend": "cd packages/frontend && yarn build",
     "build:backend": "cd packages/backend && yarn build",
     "build": "yarn build:frontend && yarn build:backend"
-  },
-  "devDependencies": {
-    "concurrently": "^7.0.0"
   }
 }
