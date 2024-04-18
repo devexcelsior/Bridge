@@ -2,3 +2,13 @@
 @import 'reset';
 @import 'footer';
 @import 'sidebar';
+@import 'main';
+@import 'breakpoints/index';
+
+a{
+    transition: color .3s ease;
+    &:hover{
+        transition: color .3s ease;
+    }
+}
+
