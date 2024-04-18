@@ -76,6 +76,11 @@
   a {
     background-color: transparent;
   }
+
+  /**
+   * border-box default box-sizing
+   */
+  *, *::before, *::after { box-sizing: border-box; }
   
   /**
    * 1. Remove the bottom border in Chrome 57-
