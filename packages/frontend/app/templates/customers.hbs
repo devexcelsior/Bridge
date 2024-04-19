@@ -1,6 +1,13 @@
 {{page-title "Customers"}}
-{{#each this.model as |customer|}}
-  <div class="customer">
-    <h2>{{customer.personalInfo.firstName}} {{customer.personalInfo.lastName}}</h2>
-  </div>
-{{/each}}
+<div class="customers">
+  <ul class="customers__list">
+    {{#each this.model as |customer|}}
+    <li class="customers__list-item">
+      <Hds::Text::Display @tag="h2" @size="400">{{customer.personalInfo.firstName}} {{customer.personalInfo.lastName}}
+      </Hds::Text::Display>
+      <Hds::Text::Body @tag="p">{{customer.companyInfo.title}} @ {{customer.companyInfo.company}}</Hds::Text::Body>
+    </li>
+    <Hds::Separator @spacing="24"/>
+    {{/each}}
+  </ul>
+</div>

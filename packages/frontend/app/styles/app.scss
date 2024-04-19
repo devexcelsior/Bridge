@@ -3,7 +3,12 @@
 @import 'footer';
 @import 'sidebar';
 @import 'main';
+
+/* Mixins */
 @import 'breakpoints/index';
+
+/* Pages */
+@import 'pages/index';
 
 a{
     transition: color .3s ease;
