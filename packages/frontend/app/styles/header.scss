@@ -1,0 +1,50 @@
+.hds-app-frame__header {
+    position: sticky;
+    top: -1px;
+    z-index: 900;
+    height: 62px;
+
+    &-inner {
+        position: absolute;
+        inset: 0;
+        display: grid;
+        grid-template-columns: 1fr 2fr 1fr;
+        align-items: center;
+        height: 62px;
+        width: 100%;
+        padding: 0 var(--hdsplus-spacing-05);
+        background-color: var(--token-color-surface-primary);
+    }
+    
+    &-link {
+        &-logo {
+            max-height: 34px;
+        }
+    }
+
+    &-nav-menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        ul{
+            @extend .ul-reset;
+            display: flex;
+        }
+        li{
+
+        }
+        a{
+            padding: 0 var(--hdsplus-spacing-05);
+            color: var(--token-color-header-nav-link-primary-dark);
+            text-decoration: none;
+            &:hover{
+                color: var(--token-color-header-nav-link-primary-hover-dark);
+            }
+        }
+    }
+
+    .theme-dark{
+        --token-color-surface-primary: #000000;
+    }
+}

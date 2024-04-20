@@ -1,11 +1,24 @@
+/* Design System Components */
 @import '@hashicorp/design-system-components';
+
+/* Broswer Reset */
 @import 'reset';
-@import 'footer';
-@import 'sidebar';
-@import 'main';
+
+/* HDSPLUS Tokens */
+@import 'tokens';
 
 /* Mixins */
+@import 'mixins/index';
+
+@import 'utility-classes/index.scss';
 @import 'breakpoints/index';
+
+
+/* App Frame Templates */
+@import 'header';
+@import 'sidebar';
+@import 'main';
+@import 'footer';
 
 /* Pages */
 @import 'pages/index';
