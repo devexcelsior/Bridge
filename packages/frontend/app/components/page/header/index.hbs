@@ -1,20 +1,20 @@
-
-  <div class="hds-app-frame__header-inner theme-dark">
-    <NavigationNarrator @routeChangeValidator={{@routeChangeValidator}} />
-    <LinkTo @route="index" class="hds-app-frame__header-link" aria-label="home page">
-      <img class="hds-app-frame__header-link-logo" src="/images/bridge-logo-white.png" alt="Bridge">
-    </LinkTo>
-    <nav class="hds-app-frame__header-nav-menu" aria-label="primary navigation" id="primary-navigation">
-      <ul role="list" aria-labelledby="primary-navigation">
-        <li>
-          <LinkTo @route="index">Home</LinkTo>
-        </li>
-        <li>
-          <LinkTo @route="customers">Customers</LinkTo>
-        </li>
-        <li>
-          <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button>
-        </li>
-      </ul>
-    </nav>
+<nav class="hds-app-frame__nav hds-app-frame__nav--theme-dark">
+  <LinkTo @route="index" class="hds-app-frame__home-link" aria-label="home page">
+    <img class="hds-app-frame__logo" src="/images/bridge-logo-white.png" alt="Bridge">
+  </LinkTo>
+  <div class="hds-app-frame__menu" aria-label="primary navigation" id="primary-navigation">
+    <ul role="list" aria-labelledby="primary-navigation">
+      <li>
+        <LinkTo @route="index">Home</LinkTo>
+      </li>
+      <li>
+        <LinkTo @route="customers">Customers</LinkTo>
+      </li>
+    </ul>
   </div>
+  <div>
+    <li>
+      <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button>
+    </li>
+  </div>
+</nav>

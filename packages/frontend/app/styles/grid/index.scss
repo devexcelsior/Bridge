@@ -1,0 +1,90 @@
+.g-grid {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(var(--columns),minmax(0,1fr));
+    column-gap: var(--column-gap)
+}
+
+@media (max-width: 767px) {
+    .g-grid {
+        --columns:4;
+        --column-gap: 16px
+    }
+}
+
+@media (min-width: 768px) and (max-width:1119px) {
+    .g-grid {
+        --columns:12;
+        --column-gap: 24px
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-grid {
+        --columns:12;
+        --column-gap: 32px
+    }
+}
+
+.g-grid-container {
+    position: relative;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto
+}
+
+@media (max-width: 767px) {
+    .g-grid-container {
+        padding-left:24px;
+        padding-right: 24px;
+        max-width: 616px
+    }
+}
+
+@media (min-width: 768px) and (max-width:1119px) {
+    .g-grid-container {
+        padding-left:40px;
+        padding-right: 40px;
+        max-width: 944px
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-grid-container {
+        padding-left:48px;
+        padding-right: 48px;
+        max-width: 1312px
+    }
+}
+
+.g-noscroll {
+    overflow: hidden
+}
+
+/* Utility classes for column start positions */
+.col-start-1 { grid-column-start: 1; }
+.col-start-2 { grid-column-start: 2; }
+.col-start-3 { grid-column-start: 3; }
+.col-start-4 { grid-column-start: 4; }
+.col-start-5 { grid-column-start: 5; }
+.col-start-6 { grid-column-start: 6; }
+.col-start-7 { grid-column-start: 7; }
+.col-start-8 { grid-column-start: 8; }
+.col-start-9 { grid-column-start: 9; }
+.col-start-10 { grid-column-start: 10; }
+.col-start-11 { grid-column-start: 11; }
+.col-start-12 { grid-column-start: 12; }
+
+/* Utility classes for column span */
+.col-span-1 { grid-column-end: span 1; }
+.col-span-2 { grid-column-end: span 2; }
+.col-span-3 { grid-column-end: span 3; }
+.col-span-4 { grid-column-end: span 4; }
+.col-span-5 { grid-column-end: span 5; }
+.col-span-6 { grid-column-end: span 6; }
+.col-span-7 { grid-column-end: span 7; }
+.col-span-8 { grid-column-end: span 8; }
+.col-span-9 { grid-column-end: span 9; }
+.col-span-10 { grid-column-end: span 10; }
+.col-span-11 { grid-column-end: span 11; }
+.col-span-12 { grid-column-end: span 12; }

@@ -10,8 +10,8 @@
 /* Mixins */
 @import 'mixins/index';
 
-@import 'utility-classes/index.scss';
-@import 'breakpoints/index';
+@import 'utility-classes';
+@import 'grid';
 
 
 /* App Frame Templates */
@@ -22,6 +22,7 @@
 
 /* Pages */
 @import 'pages/index';
+@import 'pages/customers';
 
 a{
     transition: color .3s ease;

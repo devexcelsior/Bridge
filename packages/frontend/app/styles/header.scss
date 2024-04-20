@@ -3,8 +3,9 @@
     top: -1px;
     z-index: 900;
     height: 62px;
+    grid-area: header;
 
-    &-inner {
+    .hds-app-frame__nav {
         position: absolute;
         inset: 0;
         display: grid;
@@ -16,35 +17,48 @@
         background-color: var(--token-color-surface-primary);
     }
     
-    &-link {
-        &-logo {
+    .hds-app-frame__home-link {
+        .hds-app-frame__logo {
             max-height: 34px;
         }
     }
 
-    &-nav-menu{
+    .hds-app-frame__menu{
         display: flex;
         align-items: center;
         justify-content: space-between;
         height: 100%;
+        margin: 0 auto;
+        padding: 0 var(--hdsplus-spacing-08);
         ul{
             @extend .ul-reset;
             display: flex;
+            align-items: center;
         }
         li{
-
+            position: relative;
+            white-space: nowrap;
+            margin: 0;
+            padding: 0;
         }
         a{
+            position: relative;
+            display: flex;
+            align-items: center;
+            white-space: nowrap;
+            font-family: var(--token-typography-body-200-font-family);
+            font-size: var(--token-typography-body-200-font-size);
             padding: 0 var(--hdsplus-spacing-05);
             color: var(--token-color-header-nav-link-primary-dark);
             text-decoration: none;
+            line-height: var(--hdsplus-spacing-09);
             &:hover{
                 color: var(--token-color-header-nav-link-primary-hover-dark);
             }
         }
     }
 
-    .theme-dark{
+    .hds-app-frame__nav--theme-dark{
         --token-color-surface-primary: #000000;
     }
 }
