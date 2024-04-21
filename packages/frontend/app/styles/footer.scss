@@ -1,3 +1,6 @@
+.hds-app-frame__footer{
+  @extend .pt-800;
+}
 .hds-app-frame__footer-content {
   background: var(--token-color-palette-neutral-700);
 }

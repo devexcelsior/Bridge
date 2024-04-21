@@ -1,0 +1,248 @@
+
+.g-type-display-1 {
+    font-family: var(--hdsplus-typography-display-expressive-400-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-400-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-400-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-400-letter-spacing );
+    font-weight: var(--token-typography-font-weight-bold)
+}
+
+@media (min-width: 768px) {
+    .g-type-display-1 {
+        font-family:var(--hdsplus-typography-display-expressive-500-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-500-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-500-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-500-letter-spacing )
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-type-display-1 {
+        font-family:var(--hdsplus-typography-display-expressive-600-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-600-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-600-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-600-letter-spacing )
+    }
+}
+
+.g-type-display-2 {
+    font-family: var(--hdsplus-typography-display-expressive-300-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-300-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-300-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-300-letter-spacing );
+    font-weight: 700
+}
+
+@media (min-width: 768px) {
+    .g-type-display-2 {
+        font-family:var(--hdsplus-typography-display-expressive-400-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-400-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-400-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-400-letter-spacing )
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-type-display-2 {
+        font-family:var(--hdsplus-typography-display-expressive-500-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-500-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-500-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-500-letter-spacing )
+    }
+}
+
+.g-type-display-3 {
+    font-family: var(--hdsplus-typography-display-expressive-200-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-200-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-200-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-200-letter-spacing );
+    font-weight: 700
+}
+
+@media (min-width: 768px) {
+    .g-type-display-3 {
+        font-family:var(--hdsplus-typography-display-expressive-300-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-300-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-300-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-300-letter-spacing )
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-type-display-3 {
+        font-family:var(--hdsplus-typography-display-expressive-400-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-400-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-400-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-400-letter-spacing )
+    }
+}
+
+.g-type-display-4 {
+    font-family: var(--hdsplus-typography-display-expressive-100-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-100-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-100-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-100-letter-spacing );
+    font-weight: 700
+}
+
+@media (min-width: 768px) {
+    .g-type-display-4 {
+        font-family:var(--hdsplus-typography-display-expressive-200-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-200-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-200-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-200-letter-spacing )
+    }
+}
+
+@media (min-width: 1120px) {
+    .g-type-display-4 {
+        font-family:var(--hdsplus-typography-display-expressive-300-font-family);
+        font-size: var(--hdsplus-typography-display-expressive-300-font-size);
+        line-height: var(--hdsplus-typography-display-expressive-300-line-height);
+        letter-spacing: var( --hdsplus-typography-display-expressive-300-letter-spacing )
+    }
+}
+
+.g-type-display-5 {
+    font-family: var(--hdsplus-typography-display-expressive-200-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-200-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-200-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-200-letter-spacing );
+    font-weight: 700
+}
+
+.g-type-display-6 {
+    font-family: var(--hdsplus-typography-display-expressive-100-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-100-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-100-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-100-letter-spacing );
+    font-weight: 700
+}
+
+.g-type-body-large {
+    font-family: var(--hdsplus-typography-body-400-font-family);
+    font-size: var(--hdsplus-typography-body-400-font-size);
+    line-height: var(--hdsplus-typography-body-400-line-height);
+    letter-spacing: var(--hdsplus-typography-body-400-letter-spacing);
+    font-weight: var(--token-typography-font-weight-regular)
+}
+
+.g-type-body,.g-type-body-strong {
+    font-family: var(--hdsplus-typography-body-300-font-family);
+    font-size: var(--hdsplus-typography-body-300-font-size);
+    line-height: var(--hdsplus-typography-body-300-line-height)
+}
+
+.g-type-body-strong {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-body-x-strong {
+    font-weight: var(--token-typography-font-weight-bold)
+}
+
+.g-type-body-italic,.g-type-body-x-strong {
+    font-family: var(--hdsplus-typography-body-300-font-family);
+    font-size: var(--hdsplus-typography-body-300-font-size);
+    line-height: var(--hdsplus-typography-body-300-line-height)
+}
+
+.g-type-body-italic {
+    font-style: italic
+}
+
+.g-type-body-small,.g-type-body-small-strong {
+    font-family: var(--hdsplus-typography-body-200-font-family);
+    font-size: var(--hdsplus-typography-body-200-font-size);
+    line-height: var(--hdsplus-typography-body-200-line-height)
+}
+
+.g-type-body-small-strong {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-body-small-x-strong {
+    font-weight: var(--token-typography-font-weight-bold)
+}
+
+.g-type-body-small-italic,.g-type-body-small-x-strong {
+    font-family: var(--hdsplus-typography-body-200-font-family);
+    font-size: var(--hdsplus-typography-body-200-font-size);
+    line-height: var(--hdsplus-typography-body-200-line-height)
+}
+
+.g-type-body-small-italic {
+    font-style: italic
+}
+
+.g-type-long-body,.g-type-long-body-strong {
+    font-family: var(--hdsplus-typography-body-300-font-family);
+    font-size: var(--hdsplus-typography-body-300-font-size);
+    line-height: var(--hdsplus-typography-body-300-line-height)
+}
+
+.g-type-long-body-strong {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-long-body-italic {
+    font-style: italic
+}
+
+.g-type-buttons-and-standalone-links,.g-type-long-body-italic {
+    font-family: var(--hdsplus-typography-body-300-font-family);
+    font-size: var(--hdsplus-typography-body-300-font-size);
+    line-height: var(--hdsplus-typography-body-300-line-height)
+}
+
+.g-type-buttons-and-standalone-links {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-header-nav {
+    font-family: var(--hdsplus-typography-display-expressive-100-font-family);
+    font-size: var(--hdsplus-typography-display-expressive-100-font-size);
+    line-height: var(--hdsplus-typography-display-expressive-100-line-height);
+    letter-spacing: var( --hdsplus-typography-display-expressive-100-letter-spacing );
+    font-weight: 500
+}
+
+.g-type-label,.g-type-label-strong {
+    font-family: var(--hdsplus-typography-label-font-family);
+    font-size: var(--hdsplus-typography-label-font-size);
+    line-height: var(--hdsplus-typography-label-line-height);
+    letter-spacing: var(--hdsplus-typography-label-letter-spacing);
+    text-transform: uppercase
+}
+
+.g-type-label-strong {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-label-small,.g-type-label-small-strong {
+    font-family: var(--hdsplus-typography-label-font-family);
+    font-size: var(--hdsplus-typography-label-font-size);
+    line-height: var(--hdsplus-typography-label-line-height);
+    letter-spacing: var(--hdsplus-typography-label-letter-spacing);
+    text-transform: uppercase
+}
+
+.g-type-label-small-strong {
+    font-weight: var(--token-typography-font-weight-medium)
+}
+
+.g-type-tag-label {
+    font-family: var(--hdsplus-typography-label-font-family);
+    font-size: var(--hdsplus-typography-label-font-size);
+    line-height: var(--hdsplus-typography-label-line-height);
+    letter-spacing: var(--hdsplus-typography-label-letter-spacing);
+    font-weight: var(--token-typography-font-weight-bold)
+}
+
+.g-type-code {
+    font-family: var(--token-typography-code-200-font-family);
+    font-size: var(--token-typography-code-200-font-size);
+    line-height: var(--token-typography-code-200-line-height);
+    margin: 0;
+    padding: 0
+}

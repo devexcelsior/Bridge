@@ -1,4 +1,75 @@
-.hero-component{
-    background: black;
-    min-height: 600px;
+@use "../mixins/breakpoints" as breakpoint;
+
+.hero-component {
+    background: var(--token-color-palette-neutral-900);
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/products-overview-hero-bridge.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    .hero-component__content {
+        color: var(--token-color-palette-neutral-0);
+        max-width: 650px;
+        text-align: center;
+        @extend .pt-800;
+        @extend .pb-1600;
+    }
+
+    .hero-component__content-body {
+        color: var(--token-color-palette-neutral-350);
+        @extend .g-type-body-large;
+        @extend .pt-100;
+        @extend .pb-200;
+    }
+
+    .hero-component__ctas {
+        @extend .ul-reset;
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.bridge-features {
+    @extend .g-grid;
+    @extend .g-grid-container;
+    @extend .col-start-1;
+    @extend .col-span-12;
+    row-gap: var(--token-spacing-300);
+
+    &__intro-body {
+        @extend .g-type-body;
+        @extend .pt-100;
+        color: var(--token-color-palette-neutral-450);
+    }
+
+    &__features {
+        @extend .g-grid;
+        @extend .col-start-1;
+        @extend .col-span-12;
+        row-gap: var(--token-spacing-300);
+
+        --columns: 1;
+
+        @include breakpoint.medium {
+            --columns: 2;
+        }
+
+        @include breakpoint.large {
+            --columns: 4;
+            --column-gap: var(--token-spacing-200);
+        }
+
+    }
+
+    &__feature-icon {
+        @extend .mb-100;
+    }
+
+    &__feature-body {
+        @extend .g-type-body-small;
+        color: var(--token-color-palette-neutral-450);
+        @extend .pt-50;
+    }
+
 }

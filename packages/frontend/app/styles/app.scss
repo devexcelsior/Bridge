@@ -8,10 +8,13 @@
 @import 'tokens';
 
 /* Mixins */
-@import 'mixins/index';
+@import 'mixins/breakpoints';
 
 @import 'utility-classes';
 @import 'grid';
+@import 'typography/fonts';
+@import 'typography';
+@import 'buttons';
 
 
 /* App Frame Templates */

@@ -1,0 +1,43 @@
+/**
+ * Copyright (c) HashiCorp, Inc.
+ * SPDX-License-Identifier: MPL-2.0
+ */
+
+// BREAKPOINTS
+
+// general breakdpoints
+$bridge-breakpoint-medium: 768px;
+$bridge-breakpoint-large: 1280px;
+$bridge-breakpoint-x-large: 1450px;
+
+// we have a special breakpoint for when we show the sidebar
+$bridge-breakpoint-for-sidebar: 880px;
+
+
+@mixin small {
+  @media (width <= calc(#{$bridge-breakpoint-medium} - 1px)) { @content; }
+}
+
+@mixin medium-only {
+  @media (min-width: $bridge-breakpoint-medium) and (width <= calc(#{$bridge-breakpoint-large} - 1px)) { @content; }
+}
+
+@mixin medium {
+  @media (min-width: $bridge-breakpoint-medium) { @content; }
+}
+
+@mixin large {
+  @media (min-width: $bridge-breakpoint-large) { @content; }
+}
+
+@mixin x-large {
+  @media (min-width: $bridge-breakpoint-x-large) { @content; }
+}
+
+@mixin with-mobile-sidebar {
+  @media (width <= calc(#{$bridge-breakpoint-for-sidebar} - 1px)) { @content; }
+}
+
+@mixin with-fixed-sidebar {
+  @media (min-width: $bridge-breakpoint-for-sidebar) { @content; }
+}

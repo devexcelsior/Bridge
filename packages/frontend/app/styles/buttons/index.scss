@@ -1,0 +1,36 @@
+.hds-button--color-waypoint {
+    color: var(--hdsplus-color-waypoint-button-color);
+    background-color: var(--hdsplus-color-waypoint-button-background-color);
+    border-color: var(--token-color-border-primary);
+    box-shadow: var(--token-elevation-low-box-shadow)
+}
+
+.hds-button--color-waypoint.mock-hover,.hds-button--color-waypoint:hover {
+    color: var(--hdsplus-color-waypoint-button-color);
+    background-color: var(--hdsplus-color-waypoint-button-background-color-hover);
+    cursor: pointer
+}
+
+.hds-button--color-waypoint.mock-focus,.hds-button--color-waypoint:focus {
+    color: var(--hdsplus-color-waypoint-button-color);
+    background-color: var(--hdsplus-color-waypoint-button-background-color-focus)
+}
+
+.hds-button--color-waypoint.mock-focus:before,.hds-button--color-waypoint:focus:before {
+    top: -6px;
+    right: -6px;
+    bottom: -6px;
+    left: -6px;
+    border-color: var(--token-color-focus-action-external);
+    border-radius: 10px
+}
+
+.hds-button--color-waypoint.mock-active,.hds-button--color-waypoint:active {
+    color: var(--hdsplus-color-waypoint-button-color);
+    background-color: var(--hdsplus-color-waypoint-button-background-color-active);
+    box-shadow: none
+}
+
+.hds-button--color-waypoint.mock-active:before,.hds-button--color-waypoint:active:before {
+    border-color: transparent
+}

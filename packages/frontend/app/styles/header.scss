@@ -13,7 +13,7 @@
         align-items: center;
         height: 62px;
         width: 100%;
-        padding: 0 var(--hdsplus-spacing-05);
+        padding: 0 var(--token-spacing-100);
         background-color: var(--token-color-surface-primary);
     }
     
@@ -29,7 +29,7 @@
         justify-content: space-between;
         height: 100%;
         margin: 0 auto;
-        padding: 0 var(--hdsplus-spacing-08);
+        padding: 0 var(--token-spacing-200);
         ul{
             @extend .ul-reset;
             display: flex;
@@ -48,10 +48,10 @@
             white-space: nowrap;
             font-family: var(--token-typography-body-200-font-family);
             font-size: var(--token-typography-body-200-font-size);
-            padding: 0 var(--hdsplus-spacing-05);
+            padding: 0 var(--token-spacing-100);
             color: var(--token-color-header-nav-link-primary-dark);
             text-decoration: none;
-            line-height: var(--hdsplus-spacing-09);
+            line-height: var(--token-spacing-250);
             &:hover{
                 color: var(--token-color-header-nav-link-primary-hover-dark);
             }

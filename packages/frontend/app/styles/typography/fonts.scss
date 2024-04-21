@@ -1,0 +1,41 @@
+@font-face {
+    font-family: __gilmer_3556f3;
+    src: url("/_next/static/media/9572f286f5abe2d7-s.p.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 300
+}
+
+@font-face {
+    font-family: __gilmer_3556f3;
+    src: url("/_next/static/media/b49f8e4566809511-s.p.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 400
+}
+
+@font-face {
+    font-family: __gilmer_3556f3;
+    src: url("/_next/static/media/3353a748466748eb-s.p.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 500
+}
+
+@font-face {
+    font-family: __gilmer_3556f3;
+    src: url("/_next/static/media/383d42253757fe69-s.p.woff2") format("woff2");
+    font-display: swap;
+    font-weight: 700
+}
+
+
+.font_gilmer {
+    --hdsplus-typography-display-expressive-100-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-200-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-300-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-400-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-500-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-600-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-700-font-family: var(--gilmer);
+    --hdsplus-typography-display-expressive-800-font-family: var(--gilmer);
+    --hdsplus-typography-label-font-family: var(--gilmer);
+    --font-display: var(--gilmer);
+}
