@@ -17,13 +17,35 @@
 
     .hero-component__content-body {
         color: var(--token-color-palette-neutral-350);
-        @extend .g-type-body-large, .pt-100, .pb-200;
+        @extend .g-type-body-large, .pt-100;
     }
 
     .hero-component__ctas {
-        @extend .ul-reset;
+        @extend .ul-reset, .pt-200;
         display: flex;
         justify-content: center;
+    }
+
+    .animation-mask-wrapper {
+        overflow: hidden;
+    }
+
+    .visible-display-text, .visible-body-text, .visible-btn {
+        transition: all .6s cubic-bezier(0.15, 0.83, 0.67, 0.96);
+        transform: translateY(0px);
+        opacity: 1;
+    }
+    .visible-body-text {
+        transition-delay: .15s;
+    }
+    .visible-btn {
+        transition-delay: .25s;
+    }
+
+    .hidden-display-text, .hidden-body-text, .hidden-btn {
+        transition: all .6s cubic-bezier(0.15, 0.83, 0.67, 0.96);
+        transform: translateY(100px);
+        opacity: 0;
     }
 }
 
@@ -128,6 +150,7 @@
             grid-column: 1 / -1;
             @include breakpoint.medium {
                 grid-column: 8 / -1;
+                order: 1;
             }
         }
         
