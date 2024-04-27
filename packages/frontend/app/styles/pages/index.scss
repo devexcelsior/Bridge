@@ -1,6 +1,7 @@
 @use "../mixins/breakpoints" as breakpoint;
 
 .hero-component {
+    position: relative;
     background: var(--token-color-palette-neutral-900);
     display: flex;
     justify-content: center;
