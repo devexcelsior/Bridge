@@ -1,7 +1,7 @@
 <div class="app-frame-viewport {{if this.uiState.isSidebarVisible " sidebar-visible" "sidebar-hidden" }}">
   <Hds::AppFrame as |Frame|>
     <Frame.Header>
-      <Page::Header />
+      <Layout::Header />
     </Frame.Header>
     <Frame.Sidebar>
       Sidebar content
@@ -10,7 +10,7 @@
       {{outlet}}
     </Frame.Main>
     <Frame.Footer>
-      <Page::Footer />
+      <Layout::Footer />
     </Frame.Footer>
   </Hds::AppFrame>
 </div>

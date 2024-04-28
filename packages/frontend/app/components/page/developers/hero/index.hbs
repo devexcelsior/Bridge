@@ -1,0 +1,22 @@
+<div class="hero-component" {{did-insert this.setupObserver}}>
+    <Shared::Starfield />
+    <div class="hero-component__content">
+        <div class="animation-mask-wrapper">
+            <Hds::Text::Display @tag="h1" @size="500"
+                class="g-type-display-1 font_gilmer {{if this.isVisible 'visible-display-text' 'hidden-display-text'}}">
+                Developers
+            </Hds::Text::Display>
+        </div>
+        <div class="animation-mask-wrapper">
+            <Hds::Text::Body @tag="p"
+                class="hero-component__content-body {{if this.isVisible 'visible-body-text' 'hidden-body-text'}}">
+                Unified multi-cloud, and on-prem infrastructure.
+            </Hds::Text::Body>
+        </div>
+        <ul class="hero-component__ctas">
+            <li class="animation-mask-wrapper">
+                <Hds::Button @text="Sign up for free" @size="large" @icon="cloud" class="hds-button--color-waypoint {{if this.isVisible 'visible-btn' 'hidden-btn'}}" />
+            </li>
+        </ul>
+    </div>
+</div>
