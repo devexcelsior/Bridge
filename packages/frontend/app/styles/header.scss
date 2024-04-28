@@ -5,57 +5,9 @@
     height: 62px;
     grid-area: header;
 
-    .hds-app-frame__nav {
-        position: absolute;
-        inset: 0;
-        display: grid;
-        grid-template-columns: 1fr 2fr 1fr;
-        align-items: center;
-        height: 62px;
-        width: 100%;
-        padding: 0 var(--token-spacing-100);
-        background-color: var(--token-color-surface-primary);
-    }
-    
     .hds-app-frame__home-link {
         .hds-app-frame__logo {
             max-height: 34px;
-        }
-    }
-
-    .hds-app-frame__menu{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        margin: 0 auto;
-        padding: 0 var(--token-spacing-200);
-        z-index: 2;
-        ul{
-            @extend .ul-reset;
-            display: flex;
-            align-items: center;
-        }
-        li{
-            position: relative;
-            white-space: nowrap;
-            margin: 0;
-            padding: 0;
-        }
-        a{
-            position: relative;
-            display: flex;
-            align-items: center;
-            white-space: nowrap;
-            font-family: var(--token-typography-body-200-font-family);
-            font-size: var(--token-typography-body-200-font-size);
-            padding: 0 var(--token-spacing-100);
-            color: var(--token-color-header-nav-link-primary-dark);
-            text-decoration: none;
-            line-height: var(--token-spacing-250);
-            &:hover{
-                color: var(--token-color-header-nav-link-primary-hover-dark);
-            }
         }
     }
 

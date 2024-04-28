@@ -1,20 +1,32 @@
-<nav class="hds-app-frame__nav hds-app-frame__nav--theme-dark">
+<nav class="hds-app-frame__nav {{if this.uiState.isHeroVisible "hds-app-frame__nav--theme-dark" "hds-app-frame__nav" }}">
   <LinkTo @route="index" class="hds-app-frame__home-link" aria-label="home page">
     <img class="hds-app-frame__logo" src="/images/bridge-logo-white.png" alt="Bridge">
   </LinkTo>
   <div class="hds-app-frame__menu" aria-label="primary navigation" id="primary-navigation">
     <ul role="list" aria-labelledby="primary-navigation">
       <li>
-        <LinkTo @route="index">Overview</LinkTo>
+        <LinkTo @route="index">
+          Overview
+          <span class="underline"></span>
+        </LinkTo>
       </li>
       <li>
-        <LinkTo @route="customers">Features</LinkTo>
+        <LinkTo @route="features">
+          Features
+          <span class="underline"></span>
+        </LinkTo>
       </li>
       <li>
-        <LinkTo @route="customers">Pricing</LinkTo>
+        <LinkTo @route="pricing">
+          Pricing
+          <span class="underline"></span>
+        </LinkTo>
       </li>
       <li>
-        <LinkTo @route="customers">Developers</LinkTo>
+        <LinkTo @route="developers">
+          Developers
+          <span class="underline"></span>
+        </LinkTo>
       </li>
     </ul>
   </div>

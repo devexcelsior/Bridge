@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { inject as service } from '@ember/service';
 import { action } from '@ember/object';
 
+
 export default class PageHeader extends Component {
   @service uiState:any;
 
@@ -9,4 +10,5 @@ export default class PageHeader extends Component {
   toggleSidebar() {
     this.uiState.toggleSidebar();
   }
+
 }
