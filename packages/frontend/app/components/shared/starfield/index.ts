@@ -10,14 +10,15 @@ interface Star {
   size: number;
   brightness: number;
   color: string;
-  style?: string;  // Ensure that style is a property of Star if you want to track it as part of the object
+  style: string;  // Ensure that style is computed and tracked as part of the Star object
 }
 
 export default class MultiStarAnimation extends Component {
   @tracked stars: Star[] = [];
-  @tracked numberOfStars = 100; // Default number of stars
-  @tracked twinkleFrequency = 5; // Frequency of twinkle changes per second
+  @tracked numberOfStars = 100;  // Default number of stars
+  @tracked twinkleFrequency = 5;  // Frequency of twinkle changes per second
   twinkleInterval!: number;
+  resizeObserver!: ResizeObserver;
 
   colorDistribution = [
     { color: '#ffffff', percentage: 50 },
@@ -27,21 +28,31 @@ export default class MultiStarAnimation extends Component {
 
   constructor(owner: unknown, args: {}) {
     super(owner, args);
+  }
+
+  @action
+  setupStarfield(element: HTMLElement) {
     this.initializeStars();
     this.startTwinkling();
+
+    this.resizeObserver = new ResizeObserver(() => {
+      this.initializeStars();  // Recalculate star positions based on new container size
+    });
+    this.resizeObserver.observe(element);
   }
 
   initializeStars() {
     this.stars = [];
     for (let i = 0; i < this.numberOfStars; i++) {
-      const color = this.assignColor(); // Assign a color based on distribution
+      const color = this.assignColor();  // Assign a color based on distribution
       this.stars.push({
         id: i,
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         size: Math.random() * (2 - 1) + 1,
         brightness: Math.random(),
-        color: color
+        color: color,
+        style: this.generateStyle({ x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, size: Math.random() * (2 - 1) + 1, brightness: Math.random(), color: color })
       });
     }
   }
@@ -61,17 +72,13 @@ export default class MultiStarAnimation extends Component {
   @action
   startTwinkling() {
     this.twinkleInterval = window.setInterval(() => {
-      const updatedStars = this.stars.map(star => {
-        if (Math.random() < 0.1) { // 10% chance to update the brightness
-          return {
-            ...star,
-            brightness: Math.random(),
-            style: this.generateStyle(star)
-          };
-        }
-        return star;
+      this.stars = this.stars.map(star => {
+        return Math.random() < 0.1 ? {  // 10% chance to update brightness
+          ...star,
+          brightness: Math.random(),
+          style: this.generateStyle(star)
+        } : star;
       });
-      this.stars = updatedStars;
     }, 1000 / this.twinkleFrequency);
   }
 
@@ -86,11 +93,13 @@ export default class MultiStarAnimation extends Component {
         background-color: ${star.color};
         animation: twinkle ${animationDuration}s infinite ease-in-out;
     `);
-}
-
+  }
 
   willDestroy() {
     super.willDestroy();
     clearInterval(this.twinkleInterval);
+    if (this.resizeObserver) {
+      this.resizeObserver.disconnect();
+    }
   }
 }

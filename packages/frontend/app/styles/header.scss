@@ -30,6 +30,7 @@
         height: 100%;
         margin: 0 auto;
         padding: 0 var(--token-spacing-200);
+        z-index: 2;
         ul{
             @extend .ul-reset;
             display: flex;

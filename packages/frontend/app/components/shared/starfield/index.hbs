@@ -1,4 +1,4 @@
-<div class="starfield">
+<div class="starfield" {{did-insert this.setupStarfield}}>
   {{#each this.stars as |star|}}
     <div class="star" style={{star.style}}></div>
   {{/each}}
