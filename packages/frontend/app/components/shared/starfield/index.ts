@@ -2,6 +2,7 @@ import Component from '@glimmer/component';
 import { action } from '@ember/object';
 import { tracked } from '@glimmer/tracking';
 import { htmlSafe } from '@ember/template';
+import type { SafeString } from '@ember/template';
 
 interface Star {
   id: number;
@@ -10,7 +11,7 @@ interface Star {
   size: number;
   brightness: number;
   color: string;
-  style: string;  // Ensure that style is computed and tracked as part of the Star object
+  style: SafeString;  // Updated to SafeString to match the htmlSafe output
 }
 
 export default class MultiStarAnimation extends Component {
@@ -45,15 +46,17 @@ export default class MultiStarAnimation extends Component {
     this.stars = [];
     for (let i = 0; i < this.numberOfStars; i++) {
       const color = this.assignColor();  // Assign a color based on distribution
-      this.stars.push({
+      const newStar: Star = {
         id: i,
         x: Math.random() * window.innerWidth,
         y: Math.random() * window.innerHeight,
         size: Math.random() * (2 - 1) + 1,
         brightness: Math.random(),
         color: color,
-        style: this.generateStyle({ x: Math.random() * window.innerWidth, y: Math.random() * window.innerHeight, size: Math.random() * (2 - 1) + 1, brightness: Math.random(), color: color })
-      });
+        style: htmlSafe('')  // Initialize with an empty SafeString
+      };
+      newStar.style = this.generateStyle(newStar);  // Now correctly pass a full Star object
+      this.stars.push(newStar);
     }
   }
 
@@ -73,14 +76,22 @@ export default class MultiStarAnimation extends Component {
   startTwinkling() {
     this.twinkleInterval = window.setInterval(() => {
       this.stars = this.stars.map(star => {
-        return Math.random() < 0.1 ? {  // 10% chance to update brightness
-          ...star,
-          brightness: Math.random(),
-          style: this.generateStyle(star)
-        } : star;
+        if (Math.random() < 0.1) {  // 10% chance to update the brightness
+          const updatedBrightness = Math.random();
+          return {
+            ...star,
+            brightness: updatedBrightness,
+            style: this.generateStyle({
+              ...star,
+              brightness: updatedBrightness  // Ensure the star object remains complete
+            })
+          };
+        }
+        return star;
       });
     }, 1000 / this.twinkleFrequency);
   }
+  
 
   generateStyle(star: Star) {
     const animationDuration = 1 + 1 * (1 - star.brightness); // 1s to 2s duration based on brightness
