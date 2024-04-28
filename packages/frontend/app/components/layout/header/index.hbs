@@ -1,31 +1,27 @@
-<nav class="hds-app-frame__nav {{if this.uiState.isHeroVisible "hds-app-frame__nav--theme-dark" "hds-app-frame__nav" }}">
-  <LinkTo @route="index" class="hds-app-frame__home-link" aria-label="home page">
-    <img class="hds-app-frame__logo" src="/images/bridge-logo-white.png" alt="Bridge">
+<nav class="hds-nav {{if this.uiState.isHeroVisible "hds-nav--theme-dark" "hds-nav--theme-light" }}">
+  <LinkTo @route="index" class="hds-nav__home-link" aria-label="home page">
+    <img class="hds-nav__logo" src="/images/bridge-logo-white.png" alt="Bridge">
   </LinkTo>
-  <div class="hds-app-frame__menu" aria-label="primary navigation" id="primary-navigation">
-    <ul role="list" aria-labelledby="primary-navigation">
-      <li>
-        <LinkTo @route="index">
+  <div class="hds-nav__menu" aria-label="primary navigation" id="primary-navigation">
+    <ul class="hds-nav__menu-ul" role="list" aria-labelledby="primary-navigation">
+      <li class="hds-nav__menu-li">
+        <LinkTo @route="index" class="hds-nav__menu-a">
           Overview
-          <span class="underline"></span>
         </LinkTo>
       </li>
-      <li>
-        <LinkTo @route="features">
+      <li class="hds-nav__menu-li">
+        <LinkTo @route="features" class="hds-nav__menu-a">
           Features
-          <span class="underline"></span>
         </LinkTo>
       </li>
-      <li>
-        <LinkTo @route="pricing">
+      <li class="hds-nav__menu-li">
+        <LinkTo @route="pricing" class="hds-nav__menu-a">
           Pricing
-          <span class="underline"></span>
         </LinkTo>
       </li>
-      <li>
-        <LinkTo @route="developers">
+      <li class="hds-nav__menu-li">
+        <LinkTo @route="developers" class="hds-nav__menu-a">
           Developers
-          <span class="underline"></span>
         </LinkTo>
       </li>
     </ul>

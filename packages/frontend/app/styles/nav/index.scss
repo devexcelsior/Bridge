@@ -1,5 +1,5 @@
 
-.hds-app-frame__nav {
+.hds-nav {
     position: absolute;
     inset: 0;
     display: grid;
@@ -9,28 +9,42 @@
     width: 100%;
     padding: 0 var(--token-spacing-100);
     background-color: var(--token-color-surface-primary);
-}
 
-.hds-app-frame__menu{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 100%;
-    margin: 0 auto;
-    padding: 0 var(--token-spacing-200);
-    z-index: 2;
-    ul{
+    &--theme-light{
+        --token-color-surface-primary: #ffffff;
+    }
+    &--theme-dark{
+        --token-color-surface-primary: #000000;
+    }
+
+    &__logo{
+        max-height: 34px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        margin: 0 auto;
+        padding: 0 var(--token-spacing-200);
+        z-index: 2;
+    }
+
+    &__menu-ul{
         @extend .ul-reset;
         display: flex;
         align-items: center;
     }
-    li{
+
+    &__menu-li{
         position: relative;
         white-space: nowrap;
         margin: 0;
         padding: 0;
     }
-    a{
+
+    &__menu-a{
         position: relative;
         display: block;
         align-items: center;
@@ -44,17 +58,19 @@
         &:hover{
             color: var(--token-color-header-nav-link-primary-hover-dark);
         }
-        span.underline{
-            display: block;
-            background: transparent;
-            height: 2px;
+        &::after{
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: var(--token-spacing-100);
             width: 0px;
+            height: 2px;
+            background: #fff;
             transition: all .3s cubic-bezier(0.15, 0.83, 0.67, 0.96);
         }
         &.active{
-            span.underline{
-                background: var(--token-color-header-nav-link-primary-hover-dark);
-                width: 100%;
+            &::after{
+                width: calc(100% - (var(--token-spacing-100) * 2));
                 transition: all .3s cubic-bezier(0.15, 0.83, 0.67, 0.96);
             }
         }

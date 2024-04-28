@@ -4,14 +4,4 @@
     z-index: 900;
     height: 62px;
     grid-area: header;
-
-    .hds-app-frame__home-link {
-        .hds-app-frame__logo {
-            max-height: 34px;
-        }
-    }
-
-    .hds-app-frame__nav--theme-dark{
-        --token-color-surface-primary: #000000;
-    }
 }
