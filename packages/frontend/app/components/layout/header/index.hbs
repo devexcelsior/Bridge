@@ -1,4 +1,4 @@
-<nav class="hds-nav {{if this.uiState.isHeroVisible "hds-nav--theme-dark" "hds-nav--theme-light" }}">
+<nav class="hds-nav {{if this.uiState.isHeroVisible " hds-nav--theme-dark" "hds-nav--theme-light" }}">
   <LinkTo @route="index" class="hds-nav__home-link" aria-label="home page">
     <img class="hds-nav__logo" src="/images/bridge-logo-white.png" alt="Bridge">
   </LinkTo>
@@ -26,9 +26,11 @@
       </li>
     </ul>
   </div>
-  <div>
-    <li>
-      <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button>
-    </li>
+  <div class="hds-nav__mobile-menu">
+    <ul>
+      <li>
+        {{!-- <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button> --}}
+      </li>
+    </ul>
   </div>
 </nav>

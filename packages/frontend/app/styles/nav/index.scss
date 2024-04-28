@@ -1,3 +1,4 @@
+@use "../mixins/breakpoints" as breakpoint;
 
 .hds-nav {
     position: absolute;
@@ -43,6 +44,9 @@
         @extend .ul-reset;
         display: flex;
         align-items: center;
+        @include breakpoint.small {
+            display: none;
+        }
     }
 
     &__menu-li{
@@ -81,6 +85,12 @@
                 width: calc(100% - (var(--token-spacing-100) * 2));
                 transition: all .3s cubic-bezier(0.15, 0.83, 0.67, 0.96);
             }
+        }
+    }
+
+    &__mobile-menu{
+        @include breakpoint.medium {
+            display: none;
         }
     }
 }
