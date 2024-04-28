@@ -9,12 +9,20 @@
     width: 100%;
     padding: 0 var(--token-spacing-100);
     background-color: var(--token-color-surface-primary);
+    border: none;
+    border-bottom: 1px solid var(--token-color-header-nav-border);
 
     &--theme-light{
         --token-color-surface-primary: #ffffff;
+        --token-color-header-nav-border: #dbdbdc;
+        --token-color-header-nav-link: #000000;
+        --token-color-header-nav-link-hover: #000000;
     }
     &--theme-dark{
         --token-color-surface-primary: #000000;
+        --token-color-header-nav-border: #000000;
+        --token-color-header-nav-link: #ffffff;
+        --token-color-header-nav-link-hover: #ffffff;
     }
 
     &__logo{
@@ -52,11 +60,11 @@
         font-family: var(--token-typography-body-200-font-family);
         font-size: var(--token-typography-body-200-font-size);
         padding: 0 var(--token-spacing-100);
-        color: var(--token-color-header-nav-link-primary-dark);
+        color: var(--token-color-header-nav-link);
         text-decoration: none;
         line-height: var(--token-spacing-250);
         &:hover{
-            color: var(--token-color-header-nav-link-primary-hover-dark);
+            color: var(--token-color-header-nav-link-hover);
         }
         &::after{
             content: '';
@@ -65,7 +73,7 @@
             left: var(--token-spacing-100);
             width: 0px;
             height: 2px;
-            background: #fff;
+            background: var(--token-color-header-nav-link);
             transition: all .3s cubic-bezier(0.15, 0.83, 0.67, 0.96);
         }
         &.active{
