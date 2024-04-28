@@ -89,8 +89,38 @@
     }
 
     &__mobile-menu{
+        display: flex;
+        justify-content: right;
         @include breakpoint.medium {
             display: none;
+        }
+
+        // Dropdown overrides
+        .hds-dropdown-toggle-button--color-primary{
+            color: #fff;
+            background-color: transparent;
+            border-color: transparent;
+            box-shadow: none;
+        }
+
+        .hds-dropdown-toggle-button--color-primary:focus::before{
+            border-color: var(--hdsplus-color-waypoint-button-background-color);
+        }
+
+        .hds-dropdown__content {
+            background-color: #1d1e1f;
+            border-radius: 6px;
+            width: 256px;
+            box-shadow: none;
+        }
+
+        .hds-dropdown-list-item--variant-interactive{
+            a{
+                color: #fff;
+                &:hover{
+                    color: #fff;
+                }
+            }
         }
     }
 }

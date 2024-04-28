@@ -27,10 +27,17 @@
     </ul>
   </div>
   <div class="hds-nav__mobile-menu">
-    <ul>
+    <Hds::Dropdown as |dd|>
+      <dd.ToggleButton @text="Menu" />
+      <dd.Interactive @route="index" @text="Overview" />
+      <dd.Interactive @route="features" @text="Features" />
+      <dd.Interactive @route="pricing" @text="Pricing" />
+      <dd.Interactive @route="developers" @text="Developers" />
+    </Hds::Dropdown>
+    {{!-- <ul>
       <li>
-        {{!-- <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button> --}}
+        <button type="button" {{on "click" this.toggleSidebar}}>Toggle Sidebar</button>
       </li>
-    </ul>
+    </ul> --}}
   </div>
 </nav>
