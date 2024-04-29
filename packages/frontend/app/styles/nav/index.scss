@@ -18,12 +18,30 @@
         --token-color-header-nav-border: #dbdbdc;
         --token-color-header-nav-link: #000000;
         --token-color-header-nav-link-hover: #000000;
+        --extra-desktop-buttons-display: flex;
     }
     &--theme-dark{
         --token-color-surface-primary: #000000;
         --token-color-header-nav-border: #000000;
         --token-color-header-nav-link: #ffffff;
         --token-color-header-nav-link-hover: #ffffff;
+        --extra-desktop-buttons-display: none;
+    }
+
+    // To do: CSS Grid needs refactored to be more accomadating for 
+    // these extra ctas
+    &__desktop-ctas{
+        display: var(--extra-desktop-buttons-display);
+        justify-content: flex-end;
+        @include breakpoint.small {
+            display: none;
+        }
+    }
+
+    &__ctas-list{
+        @extend .ul-reset;
+        display: flex;
+        gap: var(--token-spacing-100);
     }
 
     &__logo{
@@ -95,6 +113,7 @@
             display: none;
         }
 
+        // To do: Tokenize for light and dark themes
         // Dropdown overrides
         .hds-dropdown-toggle-button--color-primary{
             color: #fff;
