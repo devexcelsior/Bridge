@@ -43,7 +43,9 @@
         display: flex;
         gap: var(--token-spacing-100);
     }
-
+    &__home-link{
+        width: fit-content;
+    }
     &__logo{
         max-height: 34px;
     }

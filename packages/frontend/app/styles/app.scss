@@ -31,8 +31,12 @@ a{
 @import 'footer';
 
 /* Pages */
-@import 'pages/index';
 @import 'pages/customers';
+
+/* Components */
+@import 'components/hero';
+@import 'components/feature-row';
+@import 'components/feature-list';
 
 /* Sprinkles */
 @import 'stars';

@@ -11,7 +11,7 @@ interface Star {
   size: number;
   brightness: number;
   color: string;
-  style: SafeString;  // Updated to SafeString to match the htmlSafe output
+  style: SafeString;
 }
 
 export default class MultiStarAnimation extends Component {
@@ -22,9 +22,9 @@ export default class MultiStarAnimation extends Component {
   resizeObserver!: ResizeObserver;
 
   colorDistribution = [
-    { color: '#ffffff', percentage: 50 },
-    { color: '#14c6cb', percentage: 10 },
-    { color: '#7b42bc', percentage: 40 }
+    { color: '#ffffff', percentage: 10 },
+    { color: '#14c6cb', percentage: 30 },
+    { color: '#7b42bc', percentage: 60 }
   ];
 
   constructor(owner: unknown, args: {}) {

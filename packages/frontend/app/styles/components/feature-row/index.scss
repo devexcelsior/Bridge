@@ -1,0 +1,45 @@
+@use "../../mixins/breakpoints" as breakpoint;
+
+.feature-row {
+    @extend .g-grid, .g-grid-container, .col-start-1, .col-span-12;
+    row-gap: var(--token-spacing-300);
+
+    &__intro {
+        @extend .col-start-1, .col-span-12, .pt-400;
+        @include breakpoint.medium {
+            grid-column-end: span 9;
+            padding-top: var(--token-spacing-800);
+        }
+    }
+
+    &__intro-body {
+        @extend .g-type-body, .pt-100;
+        color: var(--token-color-palette-neutral-450);
+    }
+
+    &__features {
+        @extend .g-grid, .col-start-1, .col-span-12;
+        row-gap: var(--token-spacing-300);
+        --columns: 1;
+
+        @include breakpoint.medium {
+            --columns: 2;
+        }
+
+        @include breakpoint.large {
+            --columns: 4;
+            --column-gap: var(--token-spacing-200);
+        }
+
+    }
+
+    &__feature-icon {
+        @extend .mb-100;
+    }
+
+    &__feature-body {
+        @extend .g-type-body-small, .pt-50;
+        color: var(--token-color-palette-neutral-450);
+    }
+
+}

@@ -1,0 +1,27 @@
+.hero-component {
+    position: relative;
+    background: var(--token-color-palette-neutral-900);
+    display: flex;
+    justify-content: center;
+    background-image: url('/images/products-overview-hero-bridge.svg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+
+    &__content {
+        color: var(--token-color-palette-neutral-0);
+        max-width: 650px;
+        text-align: center;
+        @extend .pt-800, .pb-1600;
+    }
+
+    &__content-body {
+        color: var(--token-color-palette-neutral-350);
+        @extend .g-type-body-large, .pt-100;
+    }
+
+    &__ctas {
+        @extend .ul-reset, .pt-200;
+        display: flex;
+        justify-content: center;
+    }
+}

@@ -1,34 +1,33 @@
 .starfield {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    overflow: hidden;
-    pointer-events: none;  /* Allows clicks to pass through */
-  }
-  
-  .star {
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    animation: twinkle 1.5s infinite ease-in-out;
-  }
-  
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  pointer-events: none;  /* Allows clicks to pass through */
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  animation: twinkle 1.5s infinite ease-in-out;
+}
+
 
 @keyframes twinkle {
-    0%, 100% {
-      opacity: 1;
-    }
-    50% {
-      opacity: 0.2;
-    }
+  0%, 100% {
+    opacity: 1;
   }
-  
-  .star {
-    position: absolute;
-    border-radius: 50%;
-    background-color: white;
-    animation: twinkle 1.5s infinite ease-in-out;
+  50% {
+    opacity: 0.2;
   }
-  
+}
+
+.star {
+  position: absolute;
+  border-radius: 50%;
+  background-color: white;
+  animation: twinkle 1.5s infinite ease-in-out;
+}

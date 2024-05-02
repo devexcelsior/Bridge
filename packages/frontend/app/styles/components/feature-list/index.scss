@@ -1,0 +1,75 @@
+@use "../../mixins/breakpoints" as breakpoint;
+
+.feature-list {
+    @extend .g-grid-container, .pt-400;
+
+    @include breakpoint.medium {
+        padding-top: var(--token-spacing-800);
+    }
+
+    &__list {
+        @extend .ul-reset;
+        display: grid;
+        row-gap: var(--token-spacing-400);
+        @include breakpoint.medium {
+            row-gap: var(--token-spacing-800);
+        }
+    }
+
+    &__list-item, &__list-item--reverse {
+        @extend .g-grid, .col-start-1, .col-span-12;
+        align-items: center;
+        row-gap: var(--token-spacing-150);
+        @include breakpoint.medium {
+            row-gap: unset;
+        }
+    }
+
+    &__item-description, &__item-media{
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__item-description{
+        grid-column: 1 / -1;
+        @include breakpoint.medium {
+            grid-column: 1 / 6;
+        }
+    }
+
+    &__item-media{
+        grid-column: 1 / -1;
+        @include breakpoint.medium {
+            grid-column: 7 / -1;
+        }
+    }
+
+    &__list-item--reverse {
+
+        .feature-list__item-media{
+            grid-column: 1 / -1;
+            @include breakpoint.medium {
+                grid-column: 1 / 7;
+            }
+        }
+
+        .feature-list__item-description{
+            grid-column: 1 / -1;
+            @include breakpoint.medium {
+                grid-column: 8 / -1;
+                order: 1;
+            }
+        }
+        
+    }
+
+    &__item-body{
+        @extend .g-type-body, .pt-100;
+        color: var(--token-color-palette-neutral-450);
+    }
+
+    &__image {
+        @extend .responsive-image;
+    }
+
+}
