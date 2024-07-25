@@ -1,6 +1,6 @@
-# CReMber 🎉
+# Bridge 🎉
 
-Welcome to CReMber, your new go-to CRM application. We're all about making customer relationship management a breeze, and we're doing it with some help from Ember.js on the frontend, NestJS on the backend, and the Helios Design System by HashiCorp to make things look pretty. So, sit back, relax, and let CReMber light up your CRM experience!
+Welcome to Bridge! This is a fictitious product designed to practice consumption of the Helios Design System. We are doing it with some help from Ember.js on the frontend, NestJS on the backend, and the Helios Design System by HashiCorp to make things look pretty.
 
 ## Prerequisites
 
@@ -9,7 +9,6 @@ You will need the following things properly installed on your computer.
 * [Git](https://git-scm.com/)
 * [Node.js](https://nodejs.org/) (with npm)
 * [Ember CLI](https://cli.emberjs.com/release/)
-* [Google Chrome](https://google.com/chrome/)
 * [Yarn](https://yarnpkg.com/)
 
 ## Installation
@@ -57,6 +56,4 @@ This project is licensed under the MIT License.
 
 ## Acknowledgements 🙏
 
-- GitHub Copilot
-- GPT-3
 - Helios Design System by HashiCorp
